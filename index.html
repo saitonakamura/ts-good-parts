@@ -25,11 +25,11 @@
     </header>
 
     <section class="slide" id="title">
-        <figure><img src="pictures/mahaon.png" alt="Бабочка махаон" /></figure>
-        <h2><span class="main-title">TypeScript:</span><br />The good parts</h2>
+      <figure><img src="pictures/mahaon.png" alt="Бабочка махаон" /></figure>
+      <h2><span class="main-title"> TypeScript:</span><br />The good parts</h2>
       <style>
         #title {
-            position: relative;
+          position: relative;
         }
 
         #title h2 {
@@ -44,7 +44,7 @@
         }
 
         #title h2 .main-title {
-            font-size: 100px;
+          font-size: 100px;
         }
 
         #title figure {
@@ -63,20 +63,12 @@
     <section class="slide centered">
       <blockquote class="twitter-tweet" data-lang="ru">
         <p lang="en" dir="ltr">
-          JavaScript. It&#39;s basically TypeScript with implicit `any`, but you
-          don&#39;t have to write any types
+          JavaScript. It&#39;s basically TypeScript with implicit `any`, but you don&#39;t have to write any types
         </p>
         &mdash; Horse JS (@horse_js)
-        <a
-          href="https://twitter.com/horse_js/status/1057279482447515650?ref_src=twsrc%5Etfw"
-          >30 октября 2018 г.</a
-        >
+        <a href="https://twitter.com/horse_js/status/1057279482447515650?ref_src=twsrc%5Etfw">30 октября 2018 г.</a>
       </blockquote>
-      <script
-        async
-        src="https://platform.twitter.com/widgets.js"
-        charset="utf-8"
-      ></script>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </section>
 
     <section class="slide" id="greyGoo">
@@ -99,48 +91,42 @@
     </section>
 
     <section class="slide">
-      <h2>any
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          unknown</h2>
+      <h2>
+        any &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; unknown
+      </h2>
       <div class="columns two">
         <ul>
-            <li>Отключает все проверки</li>
-            <li>Растекается по кодовой базе</li>
-            <li>Полезен в исключительных случаях</li>
+          <li>Отключает все проверки</li>
+          <li>Растекается по кодовой базе</li>
+          <li>Полезен в исключительных случаях</li>
         </ul>
         <ul>
-            <li>>= typescript@3.0</li>
-            <li>Заставляет сделать рантайм проверки</li>
-            <li>Нужен при общении с внешней средой</li>
+          <li>>= typescript@3.0</li>
+          <li>Заставляет сделать рантайм проверки</li>
+          <li>Нужен при общении с внешней средой</li>
         </ul>
       </div>
     </section>
 
-    <section class="slide">
-        <h2>Strict</h2>
+    <section class="slide"><h2>Strict</h2></section>
 
+    <section class="slide">
+      <div class="columns two">
+        <p>strictNullChecks asd</p>
+        <p>noImplicitAny dsa</p>
+      </div>
     </section>
 
     <section class="slide">
-        <div class="columns two">
-            <p>
-                strictNullChecks
-                asd
-            </p>
-            <p>
-                noImplicitAny
-                dsa
-            </p>
-        </div>
-
-    </section>
-
-    <section class="slide">
-      <img src="pictures/import-schism.png" alt="Great christian schism illustration as a metaphor for typescript and babel different view on imports" class="cover" />
-      <a href="https://itnext.io/great-import-schism-typescript-confusion-around-imports-explained-d512fc6769c2">Great import schism: Typescript confusion around imports explained</a>
+      <img
+        src="pictures/import-schism.png"
+        alt="Great christian schism illustration as a metaphor for typescript and babel different view on imports"
+        class="cover"
+      />
+      <a href="https://itnext.io/great-import-schism-typescript-confusion-around-imports-explained-d512fc6769c2"
+        >Great import schism: Typescript confusion around imports explained</a
+      >
     </section>
 
     <section class="slide">
@@ -158,26 +144,62 @@
     </section>
 
     <section class="slide">
-        <h2>Typescript = ES201* + типы</h2>
-        <ul>
-          <li><s>Experimental decorators</s> => функция pipe</li>
-          <li><s>Enums</s> => строковые литералы</li>
-          <li><s>namespaces</s> => ES6 imports</li>
-        </ul>
-      </section>
+      <h2>Typescript = ES201* + типы</h2>
+      <ul>
+        <li><s>Experimental decorators</s> => функция pipe</li>
+        <li><s>Enums</s> => строковые литералы</li>
+        <li><s>namespaces</s> => ES6 imports</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>И еще</h2>
+      <ul>
+        <li>--forceConsistentFilenames</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Проверка типов</h2>
+      <ul>
+        <li>Нет синхронной проверке</li>
+        <li><code>tsc --noEmit --pretty --project .</code></li>
+        <li><code>CheckerPlugin</code>&nbsp; или &nbsp;<code>fork-ts-checker</code></li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Линтеры</h2>
+      <ul>
+        <li>tslint</li>
+        <li>tslint:recommended</li>
+        <li>tslint:latest</li>
+        <li>Можно даже eslint!</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Type</h2>
+      <h2>Interface</h2>
+    </section>
+
+    <section class="slide"><h2>Классы</h2></section>
+
+    <section class="slide">
+      <h2>bind(this)</h2>
+      <h2>bound class fields</h2>
+    </section>
+
+    <section class="slide"><h2>babel 7</h2></section>
+
+    <section class="slide"><h2>Генерить в рантайм по типу</h2></section>
 
     <section class="slide" id="cover">
       <h2>Shower Presentation Engine</h2>
       <p>Brought to you by <a href="http://pepelsbey.net">Vadim Makeev</a></p>
       <figure>
-        <img
-          class="cover"
-          src="pictures/cover.jpg"
-          alt="Hands on the orange typewriter in a park"
-        />
-        <figcaption class="copyright right white">
-          <a href="http://fiftyfootshadows.net/">© John Carey</a>
-        </figcaption>
+        <img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park" />
+        <figcaption class="copyright right white"><a href="http://fiftyfootshadows.net/">© John Carey</a></figcaption>
       </figure>
       <style>
         #cover h2 {
@@ -216,15 +238,11 @@
     <section class="slide">
       <h2>Plain text on your slides</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur
-        <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua. Ut enim ad minim veniam,
-        <em>quis nostrud</em> exercitation ullamco laboris
-        <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute
-        irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum
-        <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat
-        cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia
-        deserunt mollit anim id est laborum.
+        Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris
+        <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in
+        voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.
       </p>
     </section>
 
@@ -232,14 +250,12 @@
       <h2>Two columns if you like</h2>
       <div class="columns two">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
         </p>
         <p>
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.
         </p>
       </div>
     </section>
@@ -266,13 +282,10 @@
       <figure>
         <blockquote>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.
           </p>
         </blockquote>
         <figcaption>Marcus Tullius Cicero</figcaption>
@@ -333,14 +346,8 @@
     <section class="slide" id="picture">
       <h2>Pictures</h2>
       <figure>
-        <img
-          class="cover"
-          src="pictures/picture.jpg"
-          alt="Orange typewriter on a wooden table close-up"
-        />
-        <figcaption class="copyright right white">
-          <a href="http://fiftyfootshadows.net/">© John Carey</a>
-        </figcaption>
+        <img class="cover" src="pictures/picture.jpg" alt="Orange typewriter on a wooden table close-up" />
+        <figcaption class="copyright right white"><a href="http://fiftyfootshadows.net/">© John Carey</a></figcaption>
       </figure>
       <style>
         #picture h2 {
@@ -349,9 +356,7 @@
       </style>
     </section>
 
-    <section class="slide">
-      <h2 class="shout shrink">You can even shout this way</h2>
-    </section>
+    <section class="slide"><h2 class="shout shrink">You can even shout this way</h2></section>
 
     <section class="slide">
       <h2>Inner navigation</h2>
@@ -381,9 +386,7 @@
       </style>
     </section>
 
-    <footer class="badge">
-      <a href="https://github.com/shower/shower">Fork me on GitHub</a>
-    </footer>
+    <footer class="badge"><a href="https://github.com/shower/shower">Fork me on GitHub</a></footer>
 
     <div class="progress"></div>
 

@@ -12,6 +12,10 @@
   "license": "ISC",
   "dependencies": {
     "browser-sync": "^2.26.3",
+    "prettier": "^1.15.2",
     "typescript": "^3.1.6"
+  },
+  "prettier": {
+    "printWidth": 120
   }
 }
