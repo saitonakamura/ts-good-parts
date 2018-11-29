@@ -1,13 +1,11 @@
-type Type = 'fetch' | 'success'
-
-type Action<T extends Type, P> = {
-  type: T,
-  payload: P
+type FetchAction = {
+  type: 'fetch'
 }
 
-type FetchAction = Action<'fetch', undefined>
-
-type SuccessAction = Action<'success', string>
+type SuccessAction = {
+  type: 'success',
+  payload: string
+}
 
 type Actions = FetchAction | SuccessAction
 
@@ -18,9 +16,16 @@ function reducer(action: Actions) {
     case 'success':
       return action // $ExpectType SuccessAction
   }
-  
+
   const exhaustiveCheck: never = action
 }
+
+
+
+
+
+
+
 
 
 
