@@ -17,9 +17,9 @@ type Actions = FetchAction | SuccessAction
 function reducer(action: Actions) {
   switch (action.type) {
     case Type.Fetch:
-      return action // $ExpectType FetchAction
+      return action
     case Type.Success:
-      return action // $ExpectType SuccessAction
+      return action
   }
 }
 

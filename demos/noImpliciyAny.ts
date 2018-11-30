@@ -5,4 +5,5 @@ function show(arg) {
 show({});
 
 
-const inc = (number) => number + 1
+const inc = (number) =>
+  number + 1

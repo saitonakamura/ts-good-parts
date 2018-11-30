@@ -1,10 +1,12 @@
-const result = true ? 'result' : null
+const result = true
+  ? 'result'
+  : null
 
-function checkResult(res: string) {
+function check(res: string) {
   return res.trim() !== ""
 }
 
-checkResult(result)
+check(result)
 
 
 

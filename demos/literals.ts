@@ -12,9 +12,9 @@ type Actions = FetchAction | SuccessAction
 function reducer(action: Actions) {
   switch (action.type) {
     case 'fetch':
-      return action // $ExpectType FetchAction
+      return action
     case 'success':
-      return action // $ExpectType SuccessAction
+      return action
   }
 
   const exhaustiveCheck: never = action

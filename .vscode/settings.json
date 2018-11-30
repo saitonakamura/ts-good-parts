@@ -1,5 +1,6 @@
 {
   "[html]": {
     "editor.formatOnSave": true
-  }
+  },
+  "zenMode.centerLayout": false
 }

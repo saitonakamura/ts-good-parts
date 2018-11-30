@@ -1,4 +1,6 @@
-const getRandomId = (): any => `${Math.floor(Math.random()*100)}`
+const getRandomId =
+  (): any =>
+    `${Math.random()*100}`
 
 const result = getRandomId()
 
