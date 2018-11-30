@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>TypeScript: the good parts</title>
+    <title>TypeScript: The good parts</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css" />
@@ -74,10 +74,9 @@
     </section>
 
     <section class="slide" id="me">
+      <h2>Михаил Башуров</h2>
       <div class="columns two">
         <div>
-          <h2>Михаил Башуров</h2>
-
           <a class="twitter-link" href="https://twitter.com/saitonakamura" target="_blank" rel="noopener noreferrer"
             ><img class="twitter-logo" src="pictures/Twitter_Logo_Blue.svg" alt="Лого твиттер" />@saitonakamura</a
           >
@@ -123,25 +122,31 @@
       </style>
     </section>
 
-    <section class="slide centered" id="twitter">
-      <blockquote class="twitter-tweet" data-lang="eng">
-        <p lang="en" dir="ltr">
-          JavaScript. It&#39;s basically TypeScript with implicit `any`, but you don&#39;t have to write any types
-        </p>
-        &mdash; Horse JS (@horse_js)
-        <a href="https://twitter.com/horse_js/status/1057279482447515650?ref_src=twsrc%5Etfw">30 октября 2018 г.</a>
-      </blockquote>
-      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <section class="slide">
+      <img src="pictures/butterfly-effect.jpg" alt="Кадр из фильма Эффект Бабочки" class="cover" />
+    </section>
 
+    <section class="slide">
+      <img src="pictures/good.jpg" alt="JavaScript The Definive guide и JavaScript The good parts" class="cover" />
+    </section>
+
+    <section class="slide" id="twitter"><img src="pictures/horsejs.jpg" class="cover" /></section>
+
+    <section class="slide" id="travolta">
+      <img src="pictures/trav.gif" alt="John Travolta" class="cover" />
+      <h2 class="shout next">И что мне выбрать?</h2>
       <style>
-        #twitter .twitter-tweet {
-          margin-top: -50px;
+        #travolta .shout {
+          color: white;
         }
       </style>
     </section>
 
     <section class="slide" id="greyGoo">
-      <h2>Any это Серая слизь</h2>
+      <h2 class="next shout">
+        Any это<br />
+        "Серая слизь"
+      </h2>
       <figure>
         <img
           class="cover"
@@ -151,10 +156,7 @@
       </figure>
       <style>
         #greyGoo h2 {
-          margin: 100px 0 0;
           color: white;
-          text-align: center;
-          font-size: 90px;
         }
       </style>
     </section>
@@ -169,10 +171,10 @@
             <li>Полезен в исключительных случаях</li>
           </ul>
         </div>
-        <div>
+        <div class="next">
           <h2>unknown</h2>
           <ul>
-            <li>>= typescript@3.0</li>
+            <li>TypeScript 3+</li>
             <li>Заставляет сделать рантайм проверки</li>
             <li>Нужен при общении с внешней средой</li>
           </ul>
@@ -182,7 +184,7 @@
 
     <section class="slide" id="strict">
       <img src="pictures/san-andreas.jpg" alt="Постер фильма Разлом Сан-Андреас" class="cover" />
-      <h2 class="shout">Strict</h2>
+      <h2 class="shout next">Strict</h2>
 
       <style>
         #strict .shout {
@@ -207,35 +209,40 @@
             <li><code>number | null</code></li>
           </ul>
         </div>
-        <div>
+        <div class="next">
           <h2>noImplicitAny</h2>
           <ul>
             <li>any только явно</li>
+            <li>any меньше растекается</li>
           </ul>
         </div>
+      </div>
+      <div class="next note">
+        А еще &nbsp;<code>strictFunctionTypes</code>&nbsp;, &nbsp;<code>noImplicitThis</code>&nbsp; , ...
       </div>
     </section>
 
     <section class="slide" id="schism">
-      <img
-        src="pictures/import-schism.png"
-        alt="Great christian schism illustration as a metaphor for typescript and babel different view on imports"
-        class="cover"
-      />
-      <a
-        class="link"
-        href="https://itnext.io/great-import-schism-typescript-confusion-around-imports-explained-d512fc6769c2"
-        target="_blank"
-        rel="noopener noreferrer"
-        >Great import schism: Typescript confusion around imports explained</a
-      >
+      <img src="pictures/schism.jpg" alt="Great christian schism" class="cover" />
+      <div class="babel next"><code>import React</code><br /><code>from 'react'</code></div>
+
+      <div class="ts next"><code>import * as React</code><br /><code>from 'react'</code></div>
 
       <style>
-        #schism .link {
-          position: absolute;
+        #schism .babel {
           color: white;
-          bottom: 32px;
-          left: 140px;
+          position: absolute;
+          top: 50%;
+          left: 10%;
+          transform: translateY(-50%);
+        }
+
+        #schism .ts {
+          color: white;
+          position: absolute;
+          top: 50%;
+          right: -5%;
+          transform: translateY(-50%);
         }
       </style>
     </section>
@@ -247,60 +254,83 @@
         <li>Стандарт = совместимость</li>
         <li>Унификация!</li>
       </ul>
+
+      <a
+        class="link note"
+        href="https://itnext.io/great-import-schism-typescript-confusion-around-imports-explained-d512fc6769c2"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Great import schism: Typescript confusion around imports explained</a
+      >
+
+      <style>
+        /* #schism .link {
+          position: absolute;
+          color: white;
+          bottom: 32px;
+          left: 140px;
+        } */
+      </style>
     </section>
 
-    <section class="slide">
-      <div class="columns two">
-        <div>
-          <h2>Named imports</h2>
-          <ul>
-            <li>Рефакторинг</li>
-            <li>Реэкспорт</li>
-            <li>Автоимпорт</li>
-            <li>Тришейкинг</li>
-          </ul>
+    <!--
+      <section class="slide">
+        <div class="columns two">
+          <div>
+            <h2>Named imports</h2>
+            <ul>
+              <li>Рефакторинг</li>
+              <li>Реэкспорт</li>
+              <li>Автоимпорт</li>
+              <li>Тришейкинг</li>
+            </ul>
+          </div>
+          <div>
+            <h2>Default imports</h2>
+            <ul>
+              <li>Совместимость с require</li>
+              <li><s>Рефакторинг</s></li>
+              <li><code>export { default } from './module'</code></li>
+              <li><s>Автоимпорт</s></li>
+              <li><s>Тришейкинг</s></li>
+            </ul>
+          </div>
         </div>
-        <div>
-          <h2>Default imports</h2>
-          <ul>
-            <li>Совместимость с require</li>
-            <li><s>Рефакторинг</s></li>
-            <li><code>export { default } from './module'</code></li>
-            <li><s>Автоимпорт</s></li>
-            <li><s>Тришейкинг</s></li>
-          </ul>
-        </div>
-      </div>
-    </section>
+      </section>
+    -->
 
     <section class="slide">
-      <h2>Typescript = ES201* + типы</h2>
+      <h2>TypeScript = ES201* + типы</h2>
       <ul>
+        <li><s>namespaces</s> => ES6 imports</li>
         <li><s>Experimental decorators</s> => функция pipe</li>
         <li><s>Enums</s> => строковые литералы</li>
-        <li><s>namespaces</s> => ES6 imports</li>
       </ul>
     </section>
 
-    <section class="slide">
-      <h2>И еще</h2>
-      <ul>
-        <li>--forceConsistentFilenames</li>
-      </ul>
-    </section>
+    <!--
+      <section class="slide">
+        <h2>И еще</h2>
+        <ul>
+          <li>--forceConsistentFilenames</li>
+        </ul>
+      </section>
+    -->
 
-    <section class="slide">
-      <h2>Проверка типов</h2>
-      <ul>
-        <li>Нет синхронной проверке</li>
-        <li><code>tsc --noEmit --pretty --project .</code></li>
-        <li><code>CheckerPlugin</code>&nbsp; или &nbsp;<code>fork-ts-checker</code></li>
-      </ul>
-    </section>
+    <!--
+      <section class="slide">
+        <h2>Проверка типов</h2>
+        <ul>
+          <li>Нет синхронной проверке</li>
+          <li><code>tsc --noEmit --pretty --project .</code></li>
+          <li><code>CheckerPlugin</code>&nbsp; или &nbsp;<code>fork-ts-checker</code></li>
+        </ul>
+      </section>
+    -->
 
     <section class="slide" id="terminator">
       <img src="pictures/terminator.jpg" alt="Т-100 из фильма Терминатор" class="cover" />
-      <h2 class="shout">Линтеры</h2>
+      <h2 class="shout next">Линтеры</h2>
 
       <style>
         #terminator .shout {
@@ -324,52 +354,74 @@
         <div>
           <h2>Type</h2>
           <ul>
-            <li>Более гибко <code>& |</code></li>
+            <li>Более гибко &nbsp;<code>& |</code></li>
             <li>Чуть меньше писать</li>
             <li>Нет слияния деклараций</li>
+            <li>Для вашего кода</li>
           </ul>
         </div>
         <div>
           <h2>Interface</h2>
           <ul>
             <li>Слияние деклараций</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="slide"><h2>Классы</h2></section>
-
-    <section class="slide">
-      <div class="columns two">
-        <div>
-          <h2>Bind</h2>
-          <ul>
-            <li><code>this.handle = this.handle.bind(this)</code></li>
-            <li>Больше писать</li>
-            <li>Сложнее поддерживать</li>
-            <li>Стандарт</li>
-            <li>Чуть быстрее</li>
-          </ul>
-        </div>
-        <div>
-          <h2>bound class fields</h2>
-          <ul>
-            <li><code>handle = val => this.setState({ val })</code></li>
-            <li>Кратко</li>
-            <li>Удобно</li>
-            <li>Еще нет в стандарте</li>
-            <li>Менее производительные</li>
+            <li>Для библиотек</li>
           </ul>
         </div>
       </div>
     </section>
 
     <section class="slide">
-      <h2>babel 7</h2>
+      <h2>Классы</h2>
       <ul>
-        <li>@babel/preset-typescript</li>
+        <li>Хранят состояние (а оно всегда нужно)</li>
+        <li>Хуже композируются</li>
+        <li>Хуже минифицируются</li>
       </ul>
+    </section>
+
+    <!--
+      <section class="slide">
+        <div class="columns two">
+          <div>
+            <h2>Bind</h2>
+            <ul>
+              <li><code>this.handle = this.handle.bind(this)</code></li>
+              <li>Больше писать</li>
+              <li>Сложнее поддерживать</li>
+              <li>Стандарт</li>
+              <li>Чуть быстрее</li>
+            </ul>
+          </div>
+          <div>
+            <h2>bound class fields</h2>
+            <ul>
+              <li><code>handle = val => this.setState({ val })</code></li>
+              <li>Кратко</li>
+              <li>Удобно</li>
+              <li>Еще нет в стандарте</li>
+              <li>Менее производительные</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    -->
+
+    <section class="slide" id="babel">
+      <img src="pictures/babel2.png" alt="" class="cover" />
+      <div class="next babel">
+        <h2>babel 7</h2>
+        <ul>
+          <li>@babel/preset-typescript</li>
+        </ul>
+      </div>
+      <style>
+        #babel .babel {
+          position: absolute;
+          right: 15%;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      </style>
     </section>
 
     <section class="slide">
@@ -387,9 +439,8 @@
 
     <section class="slide" id="links">
       <ul>
-        <li>
-          <a href="https://twitter.com/saitonakamura" target="_blank" rel="noopener noreferrer">@saitonakamura</a>
-        </li>
+        <li><a href="https://twitter.com/saitonakamura" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+        <li><a href="https://github.com/saitonakamura" target="_blank" rel="noopener noreferrer">Github</a></li>
         <li>
           <a
             href="https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare"
@@ -407,6 +458,20 @@
             >Great import schism: Typescript confusion around imports explained</a
           >
         </li>
+        <li>
+          <a
+            class="link"
+            href="https://medium.com/@martin_hotell/interface-vs-type-alias-in-typescript-2-7-2a8f1777af4c"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Interface vs Type alias in TypeScript 2.7</a
+          >
+        </li>
+        <li>
+          <a class="link" href="https://basarat.gitbooks.io/typescript/" target="_blank" rel="noopener noreferrer"
+            >TypeScript Deep Dive</a
+          >
+        </li>
       </ul>
     </section>
 
@@ -418,17 +483,6 @@
           font-size: 130px;
         }
       </style>
-    </section>
-
-    <section class="slide">
-      <h2>Inner navigation</h2>
-      <ol>
-        <li>Lets you reveal list items one by one</li>
-        <li class="next">To keep some key points</li>
-        <li class="next">In secret from audience</li>
-        <li class="next">But it will work only once</li>
-        <li class="next">Nobody wants to see the same joke twice</li>
-      </ol>
     </section>
 
     <footer class="badge"><a href="https://github.com/shower/shower">Fork me on GitHub</a></footer>
