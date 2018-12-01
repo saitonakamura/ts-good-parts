@@ -3,7 +3,8 @@ type Task = {
 }
 
 const taskAny: Task = JSON.parse(
-  '{ "tile": "Сходить на WSD" }')
+  '{ "tile": "Сходить на WSD" }'
+  )
 
 
 
