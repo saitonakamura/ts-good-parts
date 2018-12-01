@@ -3,7 +3,3 @@ function show(arg) {
 }
 
 show({});
-
-
-const inc = (number) =>
-  number + 1
